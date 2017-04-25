@@ -1,0 +1,64 @@
+/***********************************************************************
+
+Style sheet to make things look pretty.
+
+For the most part im going to leave things the way they are and just
+mess with the colors =)
+
+
+Preliminary stuff syntax:
+
+tag {
+    property: setting;
+}
+
+tag div {
+        // references the divs inside of the parent tag.
+        // can keep going even... tag div div div button for example
+}
+
+#tag {
+}
+
+// # is used to identify "id"s used in the html such as id=addDuckForm
+// . is used to identify classes like on the buttons class="buttonModel"
+
+The difference between # and . for practical use?....
+if something is used for a specific item -> # as its a specific id reference
+if something can be applied to multiple -> . as classes can be put on many objects... like buttons!
+
+Also - note that CSS stands for cascade styling sheet. This means that things
+specified further down the sheet will apply. Example:
+
+tag {
+    color: yellow;
+}
+
+tag {
+    color: blue;
+}
+
+The output will have the tag be blue since it is further down the sheet. This is confusing
+yet a powerful feature of CSS documents. It's also why i hate them.
+
+************************************************************************/
+
+body{
+    background-color: dimgray;
+}
+#addDuckForm {
+    background-color: violet;
+}
+
+#sensitiveDuckForm {
+    background-color: lightblue;
+}
+
+#jqueryForm {
+    background-color: lightgreen;
+}
+
+.buttonModel {
+    background-color: darkblue;
+    color: yellow;
+}

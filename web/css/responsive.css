@@ -1,0 +1,29 @@
+/*********************************************************************************************
+
+    This style sheet is just to show you how things can change with adding some logic.
+    Because of the nature of CSS files. As long as this is included after main.css you'll
+    see a difference.
+
+**********************************************************************************************/
+@media screen and (max-width: 400px) {
+
+    body{
+        background-color: gray;
+    }
+    #addDuckForm {
+        background-color: #721f45;
+    }
+
+    #sensitiveDuckForm {
+        background-color: #0e7383;
+    }
+
+    #jqueryForm {
+        background-color: #086009;
+    }
+
+    .buttonModel {
+        background-color: #f7b737;
+        color: #3a0257;
+    }
+}
