@@ -62,3 +62,28 @@ body{
     background-color: darkblue;
     color: yellow;
 }
+
+
+/*
+Used for later. dont worry.
+ */
+table{
+    border-top: solid medium black;
+    width: 90%;
+    margin: 20px 5%;
+}
+
+table th {
+    font-size: 1.3em;
+    text-align: left;
+    padding: 20px 0 0 0;
+    width: 25%;
+}
+table td, table tr{
+    padding: 10px 0 0 0;
+    text-align: left;
+}
+
+table td {
+    width: 25%;
+}

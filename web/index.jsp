@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <%-- Reset and normalize are typically good to have. It ensures that no preset conditions set by the browser
-       are messing with your personal css file. Reset... rests it all. Normalize applies basic stuff to fields.
+       are messing with your personal css file. Reset... resets it all. Normalize applies basic stuff to fields.
   --%>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/normalize.css">
@@ -24,10 +24,10 @@
   <%-- Put css file below --%>
 
 
+  <%-- Put jquery script below --%>
 
-  <%-- Put js file below --%>
 
-
+  <%-- Put js file script below --%>
 
 
 
@@ -43,7 +43,7 @@
 
  Now run the page again after adding the following code. Change the screen size and notice how things alter.
  This can be applied to more than just colors. Changing how div's/sections/ etc interact with eachother is also
- a key component. You may need to refresh the page a few times. This is to replace the cached css file browser is using.
+ a key component. You may need to refresh the page a few times to replace the cached css file the browser is using.
 
     <link rel="stylesheet" href="css/responsive.css">
 
@@ -51,7 +51,7 @@
 
  Reminder: "get" method can only pass/recieve 4kb of information. Typically these are good
  for sending login information or small values - that require no feedback. Although depending on how you set it up...
- your login can even have a feed back making this not optimal.
+ your login can even have a feed back making this not optimal - though if your login uses more than 4kb, change it. lol
 --%>
 <h1>
   Submitting form to get - pure html
@@ -92,7 +92,7 @@ The action sets the file path for when the form is submitted. Any button inside 
 
 <%--
  The following form sends the information to doPost in Animals.GetDuckList servlet through using
- JQUERY in addition to standard javascript notation
+ JQUERY in addition to standard javascript notation.
 
  Reminder: This method utilizes JQUERY and as such you must include the following at the top of the page.
  If you'd like to see it work just copy this code and paste it above where "put here" is mentioned.
@@ -105,20 +105,48 @@ The action sets the file path for when the form is submitted. Any button inside 
 
      <script src="js/Animals/mammals.js"></script>
 
+  Notice how there is no action listed. Instead it features an "onsubmit" call to a function in the javascript file.
+  This allows the form to be preproccessed before submitting it. If i am correct, I believe if fried() returns true it
+  will try and submit, if false then it wont. So if you did have an action, the action would not be attempted UNTIL after
+  the onsubmit returns "true" or "false". Make sense? Here we are just going to do the function call and include no action
+  to keep it simpler.
+
+  I know I talked about having the button on the outside. That was before I remembered this tidbit. Having the button
+  on the outside allows the button to be "submitted"~ even when info is not filled in. That required an additional check.
+  Putting the button in inside and doing the onsubmit function call makes it so the user will be prompted to fill in everything
+  or fix things prior to attempting to submit. Of course you can do our own validation checking too. so meh.
+
+  When you're ready head on over to the js/Animals/mammals.js file!
 --%>
 <h1>
   submitting form with jquery. see javascript file in js/mammals.js
 </h1>
-<form id="jqueryForm">
+<form id="jqueryForm" onsubmit="return friedDuck()">
   <p>
     JQUERY Duck: <input type="text" id="jqueryInputID" name="jqueryDuckName" required>
   </p>
+  <button>Click here for duck List</button>
 </form>
-<button>Click here for duck List</button>
+
+<br><br><br>
+<%--
+
+The stuff below is just for the textbox output view for your convenience. Don't even bother till the end. You'll get there.
+
+--%>
+<p id="javascriptOutput">
 
 
-
-
+</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+</table>
+<table id="duckTable">
+  <%-- populated with javascript! --%>
+</table>
 
 </body>
 </html>
