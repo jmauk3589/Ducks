@@ -3,9 +3,7 @@
  */
 
 // skip this for now, start at comment block.
- var duckList;
-
-
+// var duckList;
 
 /*
 
@@ -97,7 +95,7 @@ function friedDuck(){
 
         // before uncommenting this, lets check to see if the servlet is even getting our request to send info....
 
-
+        /*
 
         // my double check to make sure the msg has substance before parsing - but it will still give error if not JSON.
         // its ok. cuz luckily it doesnt lock up the browser or shut server down.
@@ -111,10 +109,13 @@ function friedDuck(){
 
             document.getElementById("javascriptOutput").innerText += msg + "\n\n";
 
+            // you dont have to make ducklist a global. you can just pass it into the function as a parameter and then
+            // mess with it accordingly.
             makeDuckTable();
 
         }
 
+        */
 
 
     });
@@ -127,10 +128,24 @@ function friedDuck(){
 }
 
 
+/**
+ * The following function dynamically will add the information to the table! isnt that awesome. If you run it multiple times,
+ * the info will just append. If you want to write a function to "reset" the table each time its easy....
+ *
+ * while(parent.hasChildNodes(){
+ *      parent.removeChild(parent.firstChild);
+ * }
+ *
+ * boom.
+ *
+ */
 function makeDuckTable(){
+
+    /*
     var parent = document.getElementById("duckTable");
 
     // we dont need the first entry of ducklist. so lets just focus in on the array of people we set up.
+    // going off of our JSON example. if we did duckList.college we would get UIOWA back.
     var people = duckList.people;
 
     // now lets make the table!
@@ -149,7 +164,13 @@ function makeDuckTable(){
         parent.appendChild(row);
 
     }
+
+    */
 }
+
+
+
+// Well thats all folks! Hope you enjoyed your time and you learned something!
 
 
 

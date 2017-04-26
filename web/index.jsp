@@ -12,7 +12,7 @@
   <meta charset="UTF-8">
   <title>EVERYONE LOVES DUCKS!! =)</title>
 
-<%--This is just for the responsive.css file youll add in later. --%>
+    <%--This is just for the responsive.css file youll add in later. --%>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <%-- Reset and normalize are typically good to have. It ensures that no preset conditions set by the browser

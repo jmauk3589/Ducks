@@ -13,6 +13,10 @@ import java.io.IOException;
 
 
 /*
+
+Notes about servlets: When adding a new servlet - always "right click" src and add new servlet. Copy/pasting from another
+problem will just give you erros most likely. Its just an overall safer approach. Anyways.
+
 Notice how the @Webservlet has name="AddDuck". This is the name that pops up in the web contents on the left side of the screen.
 If you are unsure where i am talking - go to View -> Tool windows -> Web which is at the bottom. The names are used here and
 that's it.
