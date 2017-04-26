@@ -87,9 +87,10 @@ function friedDuck(){
     // $.post( "Animals.GetDuckList",  data,   function(msg){}   )
 
     var data = $("#jqueryForm").serialize(); // this is an easy way to format the input of a form. It only works with forms.
+    // It gathers all of the information that is NOT DISABLED and has a name on the form.
 
     // uncomment the following so we can call the previous function we made when the form is submitted!
-     putTimeBelow();
+    // putTimeBelow();
 
     $.post("Animals.GetDuckList", data, function(msg){
 

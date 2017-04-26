@@ -15,7 +15,7 @@ import java.io.IOException;
 /*
 
 Notes about servlets: When adding a new servlet - always "right click" src and add new servlet. Copy/pasting from another
-problem will just give you erros most likely. Its just an overall safer approach. Anyways.
+problem will just give you errors most likely. Its just an overall safer approach. Anyways.
 
 Notice how the @Webservlet has name="AddDuck". This is the name that pops up in the web contents on the left side of the screen.
 If you are unsure where i am talking - go to View -> Tool windows -> Web which is at the bottom. The names are used here and
@@ -27,7 +27,7 @@ look for. If you're unsure how I got the path name check the src folder and noti
 another package inside of Animals it would go Animals.NewPackage.AddDuck . I had issues going past 2 package levels deep, so
 just don't do it.
  */
-@WebServlet(name = "AddDuck", value="/Animals.AddDuck")
+@WebServlet(name = "AddDuck"    /*   , value="/Animals.AddDuck"      */     )
 public class AddDuck extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Notice how we are NOT putting code here. the form is sending the information using the "get" method.
@@ -48,7 +48,7 @@ public class AddDuck extends HttpServlet {
              form but didn't tell it to redirect anywhere. Remember when I said forms always "reload" the page.
              if you dont remember...surprise? ... tada...
             take a look at the URL. Notice how it goes localhost/Animals.AddDuck?addDuckName= "whatever you put"
-            everything after the "?" symbolizes parameters returned by the form. Thats also why the names on the forms
+            everything after the "?" symbolizes parameters returned by the form. That's also why the names on the forms
             are important. without them there would be no parameter name to call.
             When multiple parameters are sent they are separated by a "&". This information isn't quite necessary
             but it helps when understanding whats going on =)
@@ -63,6 +63,6 @@ public class AddDuck extends HttpServlet {
 
         //response.sendRedirect("index.jsp");
 
-
+        // Lets head back to index.jsp and look at the next form for SensitiveDuck
     }
 }

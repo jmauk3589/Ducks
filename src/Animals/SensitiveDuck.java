@@ -10,19 +10,21 @@ import java.io.IOException;
 /**
  * Created by johnn on 4/24/2017.
  */
-@WebServlet(name = "SensitiveDuck",value="/Animals.SensitiveDuck") // i already filled this in. but remember its here!!
+@WebServlet(name = "SensitiveDuck" ) // hmm... what needs to be fixed here?... look at the other form if you need to!
 public class SensitiveDuck extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String sensitiveDuck = request.getParameter("sensitiveDuckName");
+        //String sensitiveDuck = request.getParameter("sensitiveDuckName");
 
-        System.out.println("Sensitive Duck's name is "+sensitiveDuck);
+        //System.out.println("Sensitive Duck's name is "+sensitiveDuck);
 
         // Before uncommenting the following run the form and try the second sensitive duck form. Notice the URL.
         // There should be no "?" with the variables for the above information listed. This is one of the benefits of
         // post calls. User can't see info. That and the ability to send more than 4kb of data!
 
         // response.sendRedirect("index.jsp");
+
+        // Lets head back to Index.jsp and look at the next form.
 
     }
 

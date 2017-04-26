@@ -76,7 +76,9 @@ The action sets the file path for when the form is submitted. Any button inside 
 
  Reminder: "post" method is typically used when sending/recieving senstive information such as passwords,
  creditcard info etc as well as larger file types. There is no limit but realize the larger the file size the
- more time it will take the user to download and thus the user experience will be dulled
+ more time it will take the user to download and thus the user experience will be dulled.
+
+ This form is broken as well. Head on over to Animals.SensitiveDuck to fix it!
 --%>
 <h1>
   submitting form to post - pure html
@@ -95,7 +97,7 @@ The action sets the file path for when the form is submitted. Any button inside 
  JQUERY in addition to standard javascript notation.
 
  Reminder: This method utilizes JQUERY and as such you must include the following at the top of the page.
- If you'd like to see it work just copy this code and paste it above where "put here" is mentioned.
+ If you'd like to see it work just copy this code and paste it above where "put jquery script here" is mentioned.
 
      <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
 
