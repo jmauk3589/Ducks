@@ -151,6 +151,7 @@ function makeDuckTable(){
 
     // now lets make the table!
 
+    // This for loop generates the content for each row and fills it in with the information returned from the servlet!
     for(var count=0; count<people.length; count++){
         var row = document.createElement("tr");   // creates the table row for our person
         var name = document.createElement("td"); // creates table data column for name
@@ -166,9 +167,17 @@ function makeDuckTable(){
 
     }
 
+    // Do note that you can modify this even more. You can add a button and do button.setAttribute("onclick","dothisfunction()");
+    // You can even pass the variable information into the function call made here so each function is already preloaded!
+    // like "dothisfunction("+people[count].name+")" - so now when clicked it'll do that function with the name set as
+    // the parameter input! pretty convenient right?
+
+    // This is actually how i achieved the popup windows for all my pages. Each "button" made in mass, has the function
+    // call on it with the ID number for the manager, plane, etc - when clicked it auto populates the popup with the
+    // correct info from the returned JSON information!
+
     */
 }
-
 
 
 // Well thats all folks! Hope you enjoyed your time and you learned something!
