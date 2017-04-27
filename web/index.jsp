@@ -12,7 +12,7 @@
   <meta charset="UTF-8">
   <title>EVERYONE LOVES DUCKS!! =)</title>
 
-    <%--This is just for the responsive.css file youll add in later. --%>
+  <%--This is just for the responsive.css file youll add in later. --%>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <%-- Reset and normalize are typically good to have. It ensures that no preset conditions set by the browser
@@ -27,7 +27,9 @@
   <%-- Put jquery script below --%>
 
 
+
   <%-- Put js file script below --%>
+
 
 
 
@@ -105,7 +107,7 @@ The action sets the file path for when the form is submitted. Any button inside 
  Without this it just wont work. Make sure to put this AFTER the above code. The JQUERY library needs
  to be called prior to utilizing any JQUERY functions in the script below.
 
-     <script src="js/Animals/mammals.js"></script>
+     <script src="js/mammals.js"></script>
 
   Notice how there is no action listed. Instead it features an "onsubmit" call to a function in the javascript file.
   This allows the form to be preproccessed before submitting it. If i am correct, I believe if fried() returns true it
@@ -118,7 +120,7 @@ The action sets the file path for when the form is submitted. Any button inside 
   Putting the button in inside and doing the onsubmit function call makes it so the user will be prompted to fill in everything
   or fix things prior to attempting to submit. Of course you can do our own validation checking too. so meh.
 
-  When you're ready head on over to the js/Animals/mammals.js file!
+  When you're ready head on over to the js/mammals.js file!
 --%>
 <h1>
   submitting form with jquery. see javascript file in js/mammals.js
@@ -150,5 +152,12 @@ The stuff below is just for the textbox output view for your convenience. Don't 
   <%-- populated with javascript! --%>
 </table>
 
+<%-- Extra stuff that is for the extra stuff package --%>
+<form id="extraStuffForm" onsubmit="return sendInfo()">
+  <p>
+    Extra stuff input: <input type="text" id="extraStuffInput" name="extraStuff" required>
+  </p>
+  <button>click to send extra stuff to different page</button>
+</form>
 </body>
 </html>

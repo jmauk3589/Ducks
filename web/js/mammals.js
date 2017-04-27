@@ -2,6 +2,8 @@
  * Created by johnn on 4/25/2017.
  */
 
+
+
 // skip this for now, start at comment block.
 // var duckList;
 
@@ -180,8 +182,20 @@ function makeDuckTable(){
 }
 
 
-// Well thats all folks! Hope you enjoyed your time and you learned something!
 
+// Well thats all folks! Hope you enjoyed your time and you learned something! If you'd like some extra content,
+// uncomment the following and check out the extraContent.txt document.
 
+/*
+
+function sendInfo(){
+
+    var data  = $("#extraStuffForm").serialize();
+
+    window.location = "extraStuffPage.jsp?"+data;
+    return false;
+}
+
+*/
 
 

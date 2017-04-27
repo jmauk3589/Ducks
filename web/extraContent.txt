@@ -1,0 +1,96 @@
+This file is just used to start the extra content. Hopefully you uncommented the "sendInfo()" method in the mammals.js
+if not, please do that now and come back here afterwards.
+
+What we are going to do is send the information YOU ENTER to a new page. We are just going to print it to the screen
+but the application is that you can use the information in forms or other calculative processes.
+
+First make a new file in the js folder called "extra"
+Then make another file in the web folder called "extraStuffPage"
+
+Once finished copy the code below to the correct page. Feel free to then read the information you copy into
+extra.js file.
+
+--------------------------Copy everything between these lines to "extraStuffPage.jsp" -----------------------------
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+    <script src="js/extra.js"></script>
+
+</head>
+<body>
+
+<p id="extraPageContent">
+
+
+</p>
+
+
+</body>
+</html>
+
+--------------------------Copy everything between these lines to "extraStuffPage.jsp" -----------------------------
+
+
+
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$----------Copy everything between these lines to "extra.js"-----------------------
+
+
+/*
+This file is for just a little bit more information.
+One little thing that came up across my search was ...
+"this is all great - but how can i easily pass a variable to a different page?"
+
+The answer is below.
+
+ok. so remember the youtube video link i included in the bottom of that AddDuck servlet?
+Everything after the "?" was just a parameter and didn't pertain to the page itself. So in reality you could say
+that every single page on youtube is the same with just a different parameter call. Ok but did it get the variable?
+It most likely was linked to the thumbnail like how i mentioned the ID being attached to the button towards the end of
+the mammals.js file.
+
+The homepage (youtube.com) is full of thumbnails each with its own thumbnail that
+redirects you to youtube.com/watch?v="id for video"
+
+you can also grab the info doing the session.getAttribute() thing we did for the login process, but grabbing
+information from the url has its benefits. for one, could you imagine sending people youtube links and it actually working
+if youtube hid the value instead of passing it back with the url shown above?
+
+
+Also - that sendInfo() from the mammals.js file - you can send the info back to a servlet, get a response, and then
+redirect to the page with that info or just redirect from the servlet itself. overall passing values between pages has
+multiple routes so use whichever one works best for your scenario.
+
+ */
+
+// Below this line is used for the extraStuffPage.jsp
+$(function(){
+
+   document.getElementById("extraPageContent").innerText = getUrlParameter("extraStuff");
+
+});
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)), sURLVariables = sPageURL.split('&'), sParameterName, i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$-----------Copy everything between these two lines to "extra.js"--------------------------
