@@ -40,9 +40,14 @@ public class AddDuck extends HttpServlet {
         // Uncomment the lines below and rerun the index.jsp file. You should be able to get an output shown
         // with the name you entered =)
 
-        //String duckName = request.getParameter("addDuckName");
+        // inside the getParameter call put the name of the input from the form. Currently it is set to notCorrect.
+        // Go back to the form and change it to something else a bit more descriptive.
+        // The get parameter call only works on NAME properties in the serialized information in the URL,
+        // which is talked further on.
 
-        //System.out.println("duckName");
+        //String duckName = request.getParameter(" something else should go here ");
+
+        //System.out.println(duckName);
 
         /*  What should happen, is that a white screen should be on the browser. This is because you submitted the
              form but didn't tell it to redirect anywhere. Remember when I said forms always "reload" the page.

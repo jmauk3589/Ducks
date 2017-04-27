@@ -62,10 +62,11 @@
 <%--
 The action sets the file path for when the form is submitted. Any button inside of the form will auto do submit,
  but specifying on the button type helps readability. The form currently is broke. Go on over to Animals.AddDuck.
+
  --%>
 <form id="addDuckForm" action="Animals.AddDuck" method="get">
   <p>
-    Duck Name: <input type="text" id="addDuckID" name="addDuckName" required>
+    Duck Name: <input type="text" id="addDuckID" name="notCorrect" required>
   </p>
   <button type="submit" class="buttonModel">Add the duck!</button>
 </form>
@@ -81,6 +82,7 @@ The action sets the file path for when the form is submitted. Any button inside 
  more time it will take the user to download and thus the user experience will be dulled.
 
  This form is broken as well. Head on over to Animals.SensitiveDuck to fix it!
+ I've already put the name property and everything but do take a quick look at the form before heading over.
 --%>
 <h1>
   submitting form to post - pure html
@@ -129,7 +131,7 @@ The action sets the file path for when the form is submitted. Any button inside 
   <p>
     JQUERY Duck: <input type="text" id="jqueryInputID" name="jqueryDuckName" required>
   </p>
-  <button>Click here for duck List</button>
+  <button type="submit" >Click here for duck List</button>
 </form>
 
 <br><br><br>
